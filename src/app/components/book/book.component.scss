@@ -1,0 +1,13 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+form > span {
+    margin-bottom: 4px;
+}

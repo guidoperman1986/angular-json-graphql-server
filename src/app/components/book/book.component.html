@@ -1,0 +1,37 @@
+<div class="row mt-5">
+  <div class="col-6 column">
+    <form class="column" [formGroup]="bookForm">   
+      <span><b>ISBN: </b>        <input type="text" formControlName="isbn"></span>
+      <span><b>Name: </b>        <input type="text" formControlName="name"></span>
+      <span><b>Author: </b>      <input type="text" formControlName="author"></span>
+      <span><b>Published at: </b><input type="text" formControlName="published_at"></span>
+      <span><b>Reviews: </b>     <input type="text" formControlName="review_rating"></span>
+    </form>
+    <button class="btn btn-outline-primary" (click)="createBook()">Add</button>
+  </div>
+
+  <div class="col-6 column">
+    <ng-container *ngIf="book; else noResults">
+        <span><b>Id: </b>{{ book.id }}</span>
+        <span><b>ISBN: </b>{{ book.isbn }}</span>
+        <span><b>Name: </b>{{ book.name }}</span>
+        <span><b>Author: </b>{{ book.author }}</span>
+        <span><b>Published at: </b>{{ book.published_at }}</span>
+        <span><b>Reviews: </b>{{ book.review_rating }}</span>
+    </ng-container>
+
+    <nav aria-label="Page navigation example text-center">
+        <ul class="pagination mt-5">
+          <li class="page-item cursor"><a class="page-link" (click)="previousBook()">Previous</a></li>
+          <li class="page-item cursor"><a class="page-link" (click)="nextBook()">Next</a></li>
+        </ul>
+    </nav>
+    
+  </div>
+</div>
+
+<ng-template #noResults>
+    <div class="alert alert-info">
+        No results were found
+    </div>
+</ng-template>
