@@ -1,0 +1,28 @@
+{
+    "books": [
+        {
+          "id":1,
+          "isbn": "9780553109535",
+          "name": "A Brief History of Time",
+          "author": "Stephen Hawking",
+          "published_at" : "2015-01-01",
+          "review_rating": 4.6
+        },
+        {
+          "id":2,
+          "isbn": "9780553109535",
+          "name": "Dr. Jekyl and Mr. Hide",
+          "author": "Stephen Hawking",
+          "published_at" : "2015-01-01",
+          "review_rating": 4.6
+        },
+        {
+          "id":3,
+          "isbn": "9780553109535",
+          "name": "API Design",
+          "author": "Stephen Hawking",
+          "published_at" : "2015-01-01",
+          "review_rating": 4.6
+        }
+      ]
+}
